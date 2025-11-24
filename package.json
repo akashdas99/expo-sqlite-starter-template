@@ -10,10 +10,12 @@
   },
   "dependencies": {
     "@expo/metro-config": "~54.0.2",
+    "babel-plugin-inline-import": "^3.0.0",
     "babel-preset-expo": "~54.0.0",
     "drizzle-orm": "^0.44.7",
     "expo": "~54.0.25",
     "expo-constants": "~18.0.10",
+    "expo-drizzle-studio-plugin": "^0.2.1",
     "expo-linking": "~8.0.9",
     "expo-router": "~6.0.15",
     "expo-sqlite": "~16.0.9",

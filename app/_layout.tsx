@@ -1,20 +1,31 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { Stack } from "expo-router";
+import { Suspense } from "react";
+import { ActivityIndicator } from "react-native";
+import { SQLiteProvider, openDatabaseSync } from "expo-sqlite";
+import { drizzle } from "drizzle-orm/expo-sqlite";
+import { useMigrations } from "drizzle-orm/expo-sqlite/migrator";
+import migrations from "../drizzle/migrations";
+import { useDrizzleStudio } from "expo-drizzle-studio-plugin";
+export const DATABASE_NAME = "users";
 
-export default function App() {
+const expoDb = openDatabaseSync(DATABASE_NAME);
+export default function RootLayout() {
+  const db = drizzle(expoDb);
+  useDrizzleStudio(expoDb);
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start worki on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Suspense fallback={<ActivityIndicator size="large" />}>
+      <SQLiteProvider
+        databaseName={DATABASE_NAME}
+        options={{ enableChangeListener: true }}
+        useSuspense
+      >
+        <Stack>
+          <Stack.Screen
+            name="index"
+            options={{ title: "Users", headerShown: false }}
+          />
+        </Stack>
+      </SQLiteProvider>
+    </Suspense>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
