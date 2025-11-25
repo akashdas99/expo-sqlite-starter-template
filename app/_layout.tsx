@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import { ActivityIndicator, Platform, StatusBar } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { DATABASE_NAME, expoDb } from "../db/db";
+import "../global.css";
 
 export default function RootLayout() {
   useDrizzleStudio(expoDb);
