@@ -1,11 +1,10 @@
-import { Stack } from "expo-router";
-import { Suspense } from "react";
-import { ActivityIndicator } from "react-native";
-import { SQLiteProvider, openDatabaseSync } from "expo-sqlite";
 import { drizzle } from "drizzle-orm/expo-sqlite";
-import { useMigrations } from "drizzle-orm/expo-sqlite/migrator";
-import migrations from "../drizzle/migrations";
 import { useDrizzleStudio } from "expo-drizzle-studio-plugin";
+import { Stack } from "expo-router";
+import { SQLiteProvider, openDatabaseSync } from "expo-sqlite";
+import { Suspense } from "react";
+import { ActivityIndicator, Platform, StatusBar } from "react-native";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 export const DATABASE_NAME = "users";
 
 const expoDb = openDatabaseSync(DATABASE_NAME);
@@ -19,12 +18,19 @@ export default function RootLayout() {
         options={{ enableChangeListener: true }}
         useSuspense
       >
-        <Stack>
-          <Stack.Screen
-            name="index"
-            options={{ title: "Users", headerShown: false }}
-          />
-        </Stack>
+        <SafeAreaProvider
+          style={{
+            paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+            backgroundColor: "grey",
+          }}
+        >
+          <Stack>
+            <Stack.Screen
+              name="index"
+              options={{ title: "Users", headerShown: false }}
+            />
+          </Stack>
+        </SafeAreaProvider>
       </SQLiteProvider>
     </Suspense>
   );
