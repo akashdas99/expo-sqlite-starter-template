@@ -1,3 +1,8 @@
-import { drizzle } from "drizzle-orm/node-postgres";
+import { drizzle } from "drizzle-orm/expo-sqlite";
+import { openDatabaseSync } from "expo-sqlite";
 
-export const db = drizzle(process.env.DATABASE_URI!);
+export const DATABASE_NAME = "users";
+
+export const expoDb = openDatabaseSync(DATABASE_NAME);
+
+export const db = drizzle(expoDb);
