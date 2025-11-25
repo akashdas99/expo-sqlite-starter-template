@@ -22,13 +22,17 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.anonymous.expoapp"
     },
     "web": {
       "bundler": "metro",
       "favicon": "./assets/favicon.png",
       "output": "server"
     },
-    "plugins": ["expo-sqlite", "expo-router"]
+    "plugins": [
+      "expo-sqlite",
+      "expo-router"
+    ]
   }
 }
