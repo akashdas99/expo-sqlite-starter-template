@@ -6,31 +6,35 @@ import { Suspense } from "react";
 import { ActivityIndicator, Platform, StatusBar } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { DATABASE_NAME, expoDb } from "../db/db";
+import { QueryProvider } from "../providers/QueryProvider";
 import "../global.css";
 
 export default function RootLayout() {
   useDrizzleStudio(expoDb);
   return (
-    <Suspense fallback={<ActivityIndicator size="large" />}>
-      <SQLiteProvider
-        databaseName={DATABASE_NAME}
-        options={{ enableChangeListener: true }}
-        useSuspense
-      >
-        <SafeAreaProvider
-          style={{
-            paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-            backgroundColor: "grey",
-          }}
+    <QueryProvider>
+      <Suspense fallback={<ActivityIndicator size="large" />}>
+        <SQLiteProvider
+          databaseName={DATABASE_NAME}
+          options={{ enableChangeListener: true }}
+          useSuspense
         >
-          <Stack>
-            <Stack.Screen
-              name="index"
-              options={{ title: "Users", headerShown: false }}
-            />
-          </Stack>
-        </SafeAreaProvider>
-      </SQLiteProvider>
-    </Suspense>
+          <SafeAreaProvider
+            style={{
+              paddingTop:
+                Platform.OS === "android" ? StatusBar.currentHeight : 0,
+              backgroundColor: "grey",
+            }}
+          >
+            <Stack>
+              <Stack.Screen
+                name="index"
+                options={{ title: "Users", headerShown: false }}
+              />
+            </Stack>
+          </SafeAreaProvider>
+        </SQLiteProvider>
+      </Suspense>
+    </QueryProvider>
   );
 }
