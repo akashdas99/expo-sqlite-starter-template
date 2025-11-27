@@ -1,18 +1,10 @@
-import { StyleSheet, View } from "react-native";
-import { db } from "../db/db";
+import { Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function App() {
-  return <View></View>;
+  return (
+    <SafeAreaView style={{ flex: 1, backgroundColor: "red" }}>
+      <View style={{ flex: 1, backgroundColor: "blue" }} />
+    </SafeAreaView>
+  );
 }
-const styles = StyleSheet.create({
-  btn: {
-    flex: 1,
-    padding: 24,
-    backgroundColor: "#fff",
-  },
-  btnText: {
-    fontSize: 24,
-    fontWeight: "bold",
-    color: "blue",
-  },
-});
