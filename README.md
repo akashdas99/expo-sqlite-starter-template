@@ -120,8 +120,7 @@ expo-sqlite-starter/
 ├── providers/             # React context providers
 │   └── QueryProvider.tsx  # React Query provider
 ├── utils/                 # Utility functions
-├── assets/                # Images, fonts, etc.
-└── __tests__/            # Test files
+└── assets/                # Images, fonts, etc.
 ```
 
 ## Available Scripts
