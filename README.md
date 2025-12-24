@@ -1,5 +1,7 @@
 # Expo SQLite Starter Template
 
+![Expo SQLite Starter Template Banner](./assets/social-preview.png)
+
 A production-ready React Native starter template powered by Expo with SQLite database integration, featuring a modern tech stack with local-first data persistence, state management, testing, and code quality tools pre-configured.
 
 ## Features
@@ -171,7 +173,7 @@ Clear caches with `npx expo start -c`. For persistent issues, reinstall dependen
 
 ## Contributing
 
-Contributions are welcome! Open an issue or submit a pull request.
+Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 ## License
 
