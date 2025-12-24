@@ -21,29 +21,35 @@ A production-ready React Native starter template powered by Expo with SQLite dat
 ## Tech Stack
 
 ### Core
+
 - [Expo](https://expo.dev/) - React Native development platform
 - [React Native](https://reactnative.dev/) - Mobile framework
 - [TypeScript](https://www.typescriptlang.org/) - Type safety
 
 ### Navigation & UI
+
 - [Expo Router](https://docs.expo.dev/router/introduction/) - File-based routing
 - [NativeWind](https://www.nativewind.dev/) - Tailwind CSS for React Native
 - [React Native Safe Area Context](https://github.com/th3rdwave/react-native-safe-area-context) - Safe area handling
 
 ### Database
+
 - [Drizzle ORM](https://orm.drizzle.team/) - Type-safe ORM
 - [Expo SQLite](https://docs.expo.dev/versions/latest/sdk/sqlite/) - Local database
 - [Drizzle Kit](https://orm.drizzle.team/kit-docs/overview) - Database migrations
 
 ### State Management
+
 - [Zustand](https://zustand-demo.pmnd.rs/) - State management
 - [React Query](https://tanstack.com/query/latest) - Server state management
 
 ### Testing
+
 - [Jest](https://jestjs.io/) - Testing framework
 - [Testing Library](https://testing-library.com/docs/react-native-testing-library/intro/) - React Native testing utilities
 
 ### Code Quality
+
 - [ESLint](https://eslint.org/) - Linting with Expo config
 - [Prettier](https://prettier.io/) - Code formatting
 - [Husky](https://typicode.github.io/husky/) - Git hooks
@@ -121,22 +127,26 @@ expo-sqlite-starter/
 ## Available Scripts
 
 ### Development
+
 - `npm start` - Start Expo development server
 - `npm run android` - Run on Android emulator/device
 - `npm run ios` - Run on iOS simulator/device
 - `npm run web` - Run in web browser
 
 ### Database
+
 - `npm run db:generate` - Generate migrations from schema changes
 - `npm run db:migrate` - Apply migrations to database
 - `npm run db:studio` - Open Drizzle Studio GUI
 
 ### Testing
+
 - `npm test` - Run tests once
 - `npm run test:watch` - Run tests in watch mode
 - `npm run test:coverage` - Generate coverage report
 
 ### Code Quality
+
 - `npm run lint` - Run ESLint
 
 ## Database Management
@@ -191,6 +201,7 @@ MIT License - feel free to use this starter kit for your projects.
 ## Support
 
 For issues and questions:
+
 - Open an issue on GitHub
 - Check existing documentation
 - Join the Expo community on Discord
