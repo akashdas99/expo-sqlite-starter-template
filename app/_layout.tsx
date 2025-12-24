@@ -12,8 +12,8 @@ export default function RootLayout() {
   useStudio();
   if (error) {
     return (
-      <View className="flex-1 justify-center items-center bg-red-50">
-        <Text className="text-red-600 font-bold text-lg mb-2">
+      <View className="flex-1 items-center justify-center bg-red-50">
+        <Text className="mb-2 text-lg font-bold text-red-600">
           Database Error
         </Text>
         <Text className="text-red-500">{error.message}</Text>
@@ -23,9 +23,9 @@ export default function RootLayout() {
 
   if (!success) {
     return (
-      <View className="flex-1 justify-center items-center bg-white">
+      <View className="flex-1 items-center justify-center bg-white">
         <ActivityIndicator size="large" color="#3b82f6" />
-        <Text className="text-gray-600 mt-4">Initializing database...</Text>
+        <Text className="mt-4 text-gray-600">Initializing database...</Text>
       </View>
     );
   }

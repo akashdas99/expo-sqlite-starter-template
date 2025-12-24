@@ -1,8 +1,10 @@
 import { int, sqliteTable, text } from "drizzle-orm/sqlite-core";
 
-export const usersTable = sqliteTable("users_table", {
+// Example table schema - customize for your application
+export const exampleTable = sqliteTable("example_table", {
   id: int().primaryKey({ autoIncrement: true }),
   name: text().notNull(),
-  age: int().notNull(),
-  email: text().notNull().unique(),
+  createdAt: int({ mode: "timestamp" })
+    .notNull()
+    .$defaultFn(() => new Date()),
 });

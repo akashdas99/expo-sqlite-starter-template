@@ -1,23 +1,20 @@
 import { create } from "zustand";
 import { useMulti } from "../hooks/useMulti";
 
-interface CounterState {
-  count: number;
-  increment: () => void;
-  decrement: () => void;
-  reset: () => void;
-  setCount: (count: number) => void;
+// Example Zustand store - customize for your application
+interface ExampleState {
+  value: string;
+  setValue: (value: string) => void;
 }
 
-export const useCounterStore = create<CounterState>((set) => ({
-  count: 0,
-  increment: () => set((state) => ({ count: state.count + 1 })),
-  decrement: () => set((state) => ({ count: state.count - 1 })),
-  reset: () => set({ count: 0 }),
-  setCount: (count) => set({ count }),
+export const useExampleStore = create<ExampleState>((set) => ({
+  value: "",
+  setValue: (value) => set({ value }),
 }));
-export const useCounterStoreSelector = <K extends keyof CounterState>(
+
+// Helper hook for efficient store selection
+export const useExampleStoreSelector = <K extends keyof ExampleState>(
   ...keys: K[]
-): Pick<CounterState, K> => {
-  return useMulti(useCounterStore, ...keys);
+): Pick<ExampleState, K> => {
+  return useMulti(useExampleStore, ...keys);
 };

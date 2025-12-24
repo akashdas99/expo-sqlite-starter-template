@@ -5,7 +5,7 @@ import { openDatabaseSync } from "expo-sqlite";
 import migrations from "../drizzle/migrations";
 import { useDrizzleStudio } from "expo-drizzle-studio-plugin";
 
-export const DATABASE_NAME = "users";
+export const DATABASE_NAME = "app.db";
 const expoDb = openDatabaseSync(DATABASE_NAME);
 export const db = drizzle(expoDb, { schema });
 
