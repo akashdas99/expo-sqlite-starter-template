@@ -11,10 +11,12 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "lint": "expo lint",
-    "prepare": "husky"
+    "prepare": "husky",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
-    "@expo/metro-config": "~54.0.2",
     "@neondatabase/serverless": "^1.0.2",
     "@tanstack/react-query": "^5.90.11",
     "@testing-library/react-native": "^13.1.0",
