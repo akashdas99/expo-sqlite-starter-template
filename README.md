@@ -1,6 +1,6 @@
-# Expo React Native Starter Kit
+# Expo SQLite Starter Template
 
-A production-ready React Native starter kit powered by Expo, featuring a modern tech stack with database integration, state management, testing, and code quality tools pre-configured.
+A production-ready React Native starter template powered by Expo with SQLite database integration, featuring a modern tech stack with local-first data persistence, state management, testing, and code quality tools pre-configured.
 
 ## Features
 
@@ -62,7 +62,7 @@ A production-ready React Native starter kit powered by Expo, featuring a modern 
 ```bash
 # Clone the repository
 git clone <your-repo-url>
-cd expo-app
+cd expo-sqlite-starter
 
 # Or use as GitHub template
 # Click "Use this template" button on GitHub
@@ -97,7 +97,7 @@ npm run web
 ## Project Structure
 
 ```
-expo-app/
+expo-sqlite-starter/
 ├── app/                    # Expo Router pages
 │   ├── index.tsx          # Home screen
 │   └── _layout.tsx        # Root layout with providers
