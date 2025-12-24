@@ -1,5 +1,5 @@
 {
-  "name": "expo-app",
+  "name": "expo-sqlite-starter",
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
