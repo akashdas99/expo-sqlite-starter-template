@@ -1,8 +1,15 @@
-# Expo SQLite Starter Template
+# React Native Expo SQLite Starter Template
 
 ![Expo SQLite Starter Template Banner](./assets/social-preview.png)
 
-A production-ready React Native starter template powered by Expo with SQLite database integration, featuring a modern tech stack with local-first data persistence, state management, testing, and code quality tools pre-configured.
+A production-ready React Native Expo starter template with SQLite database integration, featuring a modern tech stack with local-first data persistence, state management, testing, and code quality tools pre-configured.
+
+## Screenshots
+
+<div align="center">
+  <img src="./assets/Screenshot_1.png" alt="App Screenshot 1" width="300"/>
+  <img src="./assets/Screenshot_2.png" alt="App Screenshot 2" width="300"/>
+</div>
 
 ## Features
 
@@ -13,6 +20,7 @@ A production-ready React Native starter template powered by Expo with SQLite dat
 - **Drizzle ORM** - Type-safe database toolkit with SQLite
 - **Zustand** - Lightweight state management
 - **React Query** - Powerful data fetching and caching
+- **Gorhom Bottom Sheet** - Performant bottom sheet component
 - **Jest & Testing Library** - Comprehensive testing setup
 - **ESLint & Prettier** - Code quality and formatting
 - **Husky & lint-staged** - Pre-commit hooks for code quality
@@ -30,6 +38,9 @@ A production-ready React Native starter template powered by Expo with SQLite dat
 
 - [Expo Router](https://docs.expo.dev/router/introduction/) - File-based routing
 - [NativeWind](https://www.nativewind.dev/) - Tailwind CSS for React Native
+- [Gorhom Bottom Sheet](https://gorhom.dev/react-native-bottom-sheet/) - Performant bottom sheet modals
+- [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/) - Smooth animations
+- [React Native Gesture Handler](https://docs.swmansion.com/react-native-gesture-handler/) - Touch gestures
 - [React Native Safe Area Context](https://github.com/th3rdwave/react-native-safe-area-context) - Safe area handling
 
 ### Database
