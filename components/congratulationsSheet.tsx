@@ -98,6 +98,40 @@ const CongratulationsSheet = forwardRef<BottomSheet>((_props, ref) => {
         <Text className="mt-6 text-center text-sm text-gray-400">
           Start building features immediately instead of configuration
         </Text>
+
+        <View className="mt-6 w-full">
+          <Text className="mb-3 text-center text-sm font-semibold text-gray-400">
+            KEY LIBRARIES INCLUDED
+          </Text>
+          <View className="flex-row flex-wrap justify-center gap-2">
+            <View className="rounded-full bg-gray-800 px-3 py-1.5">
+              <Text className="text-xs font-medium text-white">
+                SQLite + Drizzle
+              </Text>
+            </View>
+            <View className="rounded-full bg-gray-800 px-3 py-1.5">
+              <Text className="text-xs font-medium text-white">TypeScript</Text>
+            </View>
+            <View className="rounded-full bg-gray-800 px-3 py-1.5">
+              <Text className="text-xs font-medium text-white">NativeWind</Text>
+            </View>
+            <View className="rounded-full bg-gray-800 px-3 py-1.5">
+              <Text className="text-xs font-medium text-white">
+                Zustand + React Query
+              </Text>
+            </View>
+            <View className="rounded-full bg-gray-800 px-3 py-1.5">
+              <Text className="text-xs font-medium text-white">
+                Expo Router
+              </Text>
+            </View>
+            <View className="rounded-full bg-gray-800 px-3 py-1.5">
+              <Text className="text-xs font-medium text-white">
+                Bottom Sheet
+              </Text>
+            </View>
+          </View>
+        </View>
       </BottomSheetView>
     </BottomSheet>
   );
