@@ -4,6 +4,13 @@
 
 A production-ready React Native Expo starter template with SQLite database integration, featuring a modern tech stack with local-first data persistence, state management, testing, and code quality tools pre-configured.
 
+## Screenshots
+
+<div align="center">
+  <img src="./assets/Screenshot_1.png" alt="App Screenshot 1" width="300"/>
+  <img src="./assets/Screenshot_2.png" alt="App Screenshot 2" width="300"/>
+</div>
+
 ## Features
 
 - **Expo SDK 54** - Latest Expo framework with React 19
