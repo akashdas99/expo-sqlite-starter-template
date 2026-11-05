@@ -1,6 +1,15 @@
-# Expo SQLite Starter Template
+# React Native Expo SQLite Starter Template
 
-A production-ready React Native starter template powered by Expo with SQLite database integration, featuring a modern tech stack with local-first data persistence, state management, testing, and code quality tools pre-configured.
+![Expo SQLite Starter Template Banner](./assets/social-preview.png)
+
+A production-ready React Native Expo starter template with SQLite database integration, featuring a modern tech stack with local-first data persistence, state management, testing, and code quality tools pre-configured.
+
+## Screenshots
+
+<div align="center">
+  <img src="./assets/Screenshot_1.png" alt="App Screenshot 1" width="300"/>
+  <img src="./assets/Screenshot_2.png" alt="App Screenshot 2" width="300"/>
+</div>
 
 ## Features
 
@@ -11,6 +20,7 @@ A production-ready React Native starter template powered by Expo with SQLite dat
 - **Drizzle ORM** - Type-safe database toolkit with SQLite
 - **Zustand** - Lightweight state management
 - **React Query** - Powerful data fetching and caching
+- **Gorhom Bottom Sheet** - Performant bottom sheet component
 - **Jest & Testing Library** - Comprehensive testing setup
 - **ESLint & Prettier** - Code quality and formatting
 - **Husky & lint-staged** - Pre-commit hooks for code quality
@@ -19,29 +29,38 @@ A production-ready React Native starter template powered by Expo with SQLite dat
 ## Tech Stack
 
 ### Core
+
 - [Expo](https://expo.dev/) - React Native development platform
 - [React Native](https://reactnative.dev/) - Mobile framework
 - [TypeScript](https://www.typescriptlang.org/) - Type safety
 
 ### Navigation & UI
+
 - [Expo Router](https://docs.expo.dev/router/introduction/) - File-based routing
 - [NativeWind](https://www.nativewind.dev/) - Tailwind CSS for React Native
+- [Gorhom Bottom Sheet](https://gorhom.dev/react-native-bottom-sheet/) - Performant bottom sheet modals
+- [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/) - Smooth animations
+- [React Native Gesture Handler](https://docs.swmansion.com/react-native-gesture-handler/) - Touch gestures
 - [React Native Safe Area Context](https://github.com/th3rdwave/react-native-safe-area-context) - Safe area handling
 
 ### Database
+
 - [Drizzle ORM](https://orm.drizzle.team/) - Type-safe ORM
 - [Expo SQLite](https://docs.expo.dev/versions/latest/sdk/sqlite/) - Local database
 - [Drizzle Kit](https://orm.drizzle.team/kit-docs/overview) - Database migrations
 
 ### State Management
+
 - [Zustand](https://zustand-demo.pmnd.rs/) - State management
 - [React Query](https://tanstack.com/query/latest) - Server state management
 
 ### Testing
+
 - [Jest](https://jestjs.io/) - Testing framework
 - [Testing Library](https://testing-library.com/docs/react-native-testing-library/intro/) - React Native testing utilities
 
 ### Code Quality
+
 - [ESLint](https://eslint.org/) - Linting with Expo config
 - [Prettier](https://prettier.io/) - Code formatting
 - [Husky](https://typicode.github.io/husky/) - Git hooks
@@ -112,29 +131,32 @@ expo-sqlite-starter/
 ├── providers/             # React context providers
 │   └── QueryProvider.tsx  # React Query provider
 ├── utils/                 # Utility functions
-├── assets/                # Images, fonts, etc.
-└── __tests__/            # Test files
+└── assets/                # Images, fonts, etc.
 ```
 
 ## Available Scripts
 
 ### Development
+
 - `npm start` - Start Expo development server
 - `npm run android` - Run on Android emulator/device
 - `npm run ios` - Run on iOS simulator/device
 - `npm run web` - Run in web browser
 
 ### Database
+
 - `npm run db:generate` - Generate migrations from schema changes
 - `npm run db:migrate` - Apply migrations to database
 - `npm run db:studio` - Open Drizzle Studio GUI
 
 ### Testing
+
 - `npm test` - Run tests once
 - `npm run test:watch` - Run tests in watch mode
 - `npm run test:coverage` - Generate coverage report
 
 ### Code Quality
+
 - `npm run lint` - Run ESLint
 
 ## Database Management
@@ -171,7 +193,7 @@ Clear caches with `npx expo start -c`. For persistent issues, reinstall dependen
 
 ## Contributing
 
-Contributions are welcome! Open an issue or submit a pull request.
+Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 ## License
 
@@ -189,6 +211,7 @@ MIT License - feel free to use this starter kit for your projects.
 ## Support
 
 For issues and questions:
+
 - Open an issue on GitHub
 - Check existing documentation
 - Join the Expo community on Discord
