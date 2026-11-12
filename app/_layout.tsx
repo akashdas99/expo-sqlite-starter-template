@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import { ActivityIndicator, Text, View } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import { Toaster } from "rn-toastie";
 import {
   DATABASE_NAME,
   useDatabase,
@@ -74,6 +75,7 @@ function Ready({ client }: { client: DatabaseClient }) {
           >
             <SafeAreaProvider>
               <Stack screenOptions={{ headerShown: false }} />
+              <Toaster position="top" />
             </SafeAreaProvider>
           </SQLiteProvider>
         </Suspense>
