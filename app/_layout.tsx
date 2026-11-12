@@ -4,13 +4,46 @@ import { Suspense } from "react";
 import { ActivityIndicator, Text, View } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import { DATABASE_NAME, useDatabaseMigrations, useStudio } from "../db/client";
+import {
+  DATABASE_NAME,
+  useDatabase,
+  useDatabaseMigrations,
+  useStudio,
+} from "../db/client";
 import "../global.css";
 import { QueryProvider } from "../providers/QueryProvider";
 
+type DatabaseClient = NonNullable<ReturnType<typeof useDatabase>["client"]>;
+
 export default function RootLayout() {
-  const { success, error } = useDatabaseMigrations();
-  useStudio();
+  const { client, error: openError } = useDatabase();
+
+  if (openError) {
+    return (
+      <View className="flex-1 items-center justify-center bg-red-50">
+        <Text className="mb-2 text-lg font-bold text-red-600">
+          Database Error
+        </Text>
+        <Text className="text-red-500">{openError.message}</Text>
+      </View>
+    );
+  }
+
+  if (!client) {
+    return (
+      <View className="flex-1 items-center justify-center bg-white">
+        <ActivityIndicator size="large" color="#3b82f6" />
+        <Text className="mt-4 text-gray-600">Initializing database...</Text>
+      </View>
+    );
+  }
+
+  return <Ready client={client} />;
+}
+
+function Ready({ client }: { client: DatabaseClient }) {
+  const { success, error } = useDatabaseMigrations(client.db);
+  useStudio(client.expoDb);
   if (error) {
     return (
       <View className="flex-1 items-center justify-center bg-red-50">
